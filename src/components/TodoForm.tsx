@@ -11,19 +11,19 @@ export const TodoForm: React.FC<TodoFormProps> = (props) => {
     };
 
     const handleKeyPress = (event: React.KeyboardEvent) => {
-        if (event.key === 'Enter' && title.trim() ) {
+        if (event.key === 'Enter' && title.trim()) {
             props.onAdd(title)
             setTitle('')
         }
     }
     return (
         <div className='input-field mt2'>
-            <input 
-            value={title}
-            onChange={handleChange}
-            type='text' id='title' 
-            placeholder='Введите название дела'
-            onKeyPress={handleKeyPress}
+            <input
+                value={title}
+                onChange={handleChange}
+                type='text' id='title'
+                placeholder='Введите название дела'
+                onKeyPress={handleKeyPress}
             />
             <label htmlFor='title' className='active'>
                 Введите название дела
